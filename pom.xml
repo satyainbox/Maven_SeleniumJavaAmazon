@@ -66,24 +66,7 @@
 		<artifactId>httpclient</artifactId>
 		<version>4.3.5</version>
 	</dependency>
-	<!-- tHE above DEPENDENCIES ARE ADDED WHEN SELENIUM 2.53.0 is used -->
-	<dependency>
-		<groupId>net.sourceforge.tess4j</groupId>
-		<artifactId>tess4j</artifactId>
-		<version>3.2.1</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-core -->
-	<dependency>
-		<groupId>org.apache.tika</groupId>
-		<artifactId>tika-core</artifactId>
-		<version>1.16</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-parsers -->
-	<dependency>
-		<groupId>org.apache.tika</groupId>
-		<artifactId>tika-parsers</artifactId>
-		<version>1.16</version>
-	</dependency>
+	<!-- tHE above DEPENDENCIES ARE ADDED WHEN SELENIUM 2.53.0 is used -->	
    	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 	<dependency>
 		<groupId>org.apache.poi</groupId>
@@ -293,7 +276,7 @@
 					<target>1.8</target>
 				</configuration>
 		</plugin>
-		<plugin>
+		<!-- <plugin>
 		  <groupId>org.apache.maven.plugins</groupId>
 		  <artifactId>maven-antrun-plugin</artifactId>
 		  <version>1.7</version>
@@ -312,7 +295,7 @@
 		      </goals>
 		    </execution>
 		  </executions>
-		</plugin>
+		</plugin>  -->
 		<plugin>
  			<groupId>org.apache.maven.plugins</groupId>
  			<artifactId>maaven-surefire-plugin</artifactId>
@@ -371,6 +354,21 @@
                     </execution>
                 </executions>
   		</plugin>
+  		<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-war-plugin</artifactId>
+<version>2.3</version>
+<configuration>
+    <webResources>
+        <resource>
+            <filtering>false</filtering>
+            <targetPath>WEB-INF/classes</targetPath>
+            <directory>${basedir}/target/classes</directory>
+        </resource>
+    </webResources>
+    <filtering>false</filtering>
+  </configuration>
+</plugin>
   	</plugins>
   	</pluginManagement>
   </build>

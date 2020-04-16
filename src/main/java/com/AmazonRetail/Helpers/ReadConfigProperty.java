@@ -1,11 +1,10 @@
-package com.RegressionAutomation.Retail.Helpers;
+package com.AmazonRetail.Helpers;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-import com.RegressionAutomation.Retail.GenericMethods.Constants;
-///////////////////////////////////////////////////////////////////////////////////
+import com.AmazonRetail.GenericMethods.Constants;
 
 
 //////////////////////////////////////////////////////////////////////////////////

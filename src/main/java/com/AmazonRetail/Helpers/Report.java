@@ -1,4 +1,4 @@
-package com.RegressionAutomation.Retail.Helpers;
+package com.AmazonRetail.Helpers;
 
 import java.io.File;
 import static org.testng.Assert.*;
@@ -8,7 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-import com.RegressionAutomation.Retail.GenericMethods.Constants;
+import com.AmazonRetail.GenericMethods.Constants;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;

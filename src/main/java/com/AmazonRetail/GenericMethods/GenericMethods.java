@@ -1,16 +1,17 @@
-package com.RegressionAutomation.Retail.GenericMethods;
+package com.AmazonRetail.GenericMethods;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.commons.codec.binary.Base64;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.RegressionAutomation.Retail.Helpers.ReadConfigProperty;
+import com.AmazonRetail.Helpers.ReadConfigProperty;
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -70,7 +71,7 @@ public class GenericMethods extends Constants {
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	public static Map<String, String> getDataFromExcel(String CucumberfileName)
 	{
-		Map<String, String> dATA_MAP1 = new HashMap<String, String>();
+		dATA_MAP1 = new HashMap<String, String>();
 		String InputSheetAddress= userDir + ReadConfigProperty.getConfigValues("InputSheetAddress");
 		String InputSheetName=ReadConfigProperty.getConfigValues("InputSheetName");
 		String DataSheetname=ReadConfigProperty.getConfigValues("DataSheetname");
@@ -217,5 +218,35 @@ public class GenericMethods extends Constants {
 		}
 		return dATA_MAP1;
 		
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//Method Name       :getData
+	//Parameter used    :Data
+	//Author Name	    :satya ranjan
+	//Method Description:return value of given column name of excel data sheet 	
+	//Date Of Creation:		
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public static String getData(String Data)
+	{
+		String ReturnData=Data;
+		ReturnData = Constants.dATA_MAP1.get(Data);
+		if (ReturnData == null)
+		{
+			ReturnData=Data;
+		}
+		
+		return ReturnData;
+		
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	//Method Name       :decodeStr
+	//Parameter used    :encodedStr
+	//Author Name	    :satya ranjan
+	//Method Description:convert decoded string to encode	
+	//Date Of Creation:		
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	public static String decodeStr(String encodedStr){
+		byte[] decodedBytes = Base64.decodeBase64(encodedStr);
+		return new String(decodedBytes);
 	}
 }

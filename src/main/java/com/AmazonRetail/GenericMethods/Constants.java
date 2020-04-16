@@ -1,12 +1,15 @@
-package com.RegressionAutomation.Retail.GenericMethods;
+package com.AmazonRetail.GenericMethods;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
+import java.util.Map;
 import org.apache.poi.ss.usermodel.Workbook;
 
-import com.RegressionAutomation.Retail.Helpers.Report;
+import com.AmazonRetail.Helpers.Report;
+
+import cucumber.runtime.model.CucumberFeature;
+
 
 public class Constants {
 	
@@ -28,5 +31,9 @@ public class Constants {
 	public static String HTMLReportPath;
 	public static Report report;
 	public static Workbook workbook;
+	public static Map<String, String> dATA_MAP1;
+	public static CucumberFeature runFeature;
+	public static String testUnderExecution = null;
+	public static String executionFlag=null;
 	
 }

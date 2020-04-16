@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >  
+<suite name="AmazonRegrssionSuite" verbose="1" >
+  <test name="Amazon - AccountDetailsPage" >
+    <classes>
+       <class name="com.RegressionAutomation.Retail.testRunner" />
+       <parameter name="featureName" value="TC_01_Validate_Account_Details.feature"></parameter>
+       <parameter name="testName" value="TC_01_Validate_Account_Details"></parameter>
+    </classes>
+  </test>  
+</suite>

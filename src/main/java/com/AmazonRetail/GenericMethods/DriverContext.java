@@ -1,4 +1,4 @@
-package com.RegressionAutomation.Retail.GenericMethods;
+package com.AmazonRetail.GenericMethods;
 
 import java.util.concurrent.TimeUnit;
 
